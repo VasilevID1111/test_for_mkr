@@ -1,0 +1,395 @@
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+header {
+    text-align: justify;
+    letter-spacing: 1px;
+    padding: 1%;
+    background: #2c3e50;
+    color: #fff;
+    
+
+    padding-top: 20px;
+    
+}
+.text-field_input{
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #303841; /* Green */
+}
+.text-field{
+
+    text-align:center;
+    padding: 10px;
+    margin:20px;
+}
+.button-auth {
+    transition-duration: 0.4s;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+   
+}
+
+.button-auth:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.nav-list {
+    display: flex;   /* Все элементы навигации теперь в одной строке */
+    column-gap: 50px; /* Отступ элементов */
+   /* font-weight: 500;
+    font-size: 22px;*/
+    justify-content: center; 
+}
+.list{
+    display: flex; 
+    justify-content: space-between; 
+}
+.nav-item {
+      left: 0;
+}
+.nav-link {
+   left: 0;
+   border-radius: 10px;
+  
+}
+.nav-link:hover {
+   text-decoration: underline;
+}
+.div-search{
+    margin-top: 50px;
+    display: flex; 
+    
+}
+.form-search {
+  width: 100%;
+  height: 40px;
+ display: flex; 
+    justify-content: center; 
+  
+
+  }
+.inp-search {
+    width: 75%;
+    padding: 10px 5px;
+    float: left;
+    border-radius:  5px;
+  border: 3px solid #2C3E50;
+  }
+.but-search{
+ 
+    background: none;
+    margin-top: 0.5em;
+}
+.sel-search{
+   border-radius:  5px;
+  border: 3px solid #2C3E50;
+  margin-right: 8%;
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+    background: #2c3e50;
+    color: #D7D9DC;
+    text-align: center;
+}
+.categories{
+    margin-left: 1%;
+    border: 3px solid #2C3E50;
+    width: auto;
+
+}
+.a-categ{
+    display: flex; 
+    text-decoration: none;
+    color: #0f7afc;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(15, 122, 252, 0.2);
+}
+.a-categ:hover {
+  text-decoration: none;
+  color: #cf0000;
+  border-bottom-color: rgba(208, 64, 0, 0.2);
+}
+.main-page{
+    margin-top: 1%;
+    display: flex;
+}
+.img_card{
+    width: 50px;
+    height: 50px;
+    margin-right: 2%;
+    border: 2px solid #2C3E50;
+    border-radius: 50%;
+}
+.ad_card{
+     display: flex;
+     padding: 0.5%;
+    border: 2px solid #2C3E50;
+    border-radius: 5%;
+}
+.three-elems{
+    margin-left: 15%;
+    margin-top: 1%;
+    display: flex;   
+    column-gap: 50px;
+    justify-content: center; 
+}
+.type{
+   text-align: center;
+   border: 1px solid #2C3E50;
+    border-radius: 90%;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.star{
+    background-image: url('imgs/icons-star.png');
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    padding-top: 25%;
+    background-repeat: no-repeat;
+}
+.text-card{
+
+}
+.a-card{
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+/* выпадающее окно */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 60%;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+.modal-dialog2 {
+    
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog2 {
+      max-width: 40%;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+/* выпадающее окно конец */
+.popup-card{
+    display: flex;
+     padding: 0.5%;
+    
+}
+.body_card{
+    
+     padding: 0.5%;
+}
+.btn {
+      
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2C3E50;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;  
+    
+    transition: box-shadow 0.2s;
+
+    margin-left: 10%; 
+}
+
+.btn:focus-visible {
+    border: 1px solid #4c51f9;
+    outline: none;
+}
+.btn:hover {
+    transition: all 0.2s;
+    box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn:active {
+    background-color: #808080;
+}
+.btn:disabled {
+    background-color: #eee;
+    border-color: #eee;
+    color: #444;
+    cursor: not-allowed;
+}
+.img-success{
+    margin-left: 35%; 
+    width: 50px;
+    height: 50px;
+}
+.modal-orders{
+    text-align: center;
+}
+.modal-star{
+    text-align: center;
+}
+.modal-review{
+    text-align: center;
+}
+.modal-review-author{
+    text-align: right;
+    font-size: 14px;
+    font-style: italic;
+}
+.img_user{
+    margin-left: 30%;
+    width: 80px;
+    height: 80px;
+    margin-right: 2%;
+    border: 2px solid #2C3E50;
+    border-radius: 50%;
+}
+.modal-reviews{
+    
+    font-size: 18px;
+    font-weight: bold;
+}
+.modal-review-user{
+    padding-left: 20px;
+}
+.modal-review-data{
+    color: green;
+    font-size: 10px;
+    padding-left: 21px;
+}
+.modal-review-text{
+    padding-left: 35px;
+}
