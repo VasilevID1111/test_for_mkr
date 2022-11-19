@@ -118,11 +118,12 @@ for ($i = 0; $i < count($usname); $i++) {
 
 		}
 	
-		$readuserid = array();
-		$readtype = array();
-		$readcategories = array();
-		$readname = array();
-		$readdescription = array();
+		$readuserid = list();
+		$readtype = list();
+		$readcategories = list();
+		$readname = list();
+		$readdescription = list();
+		$readimage_url = array();
 		$readimage_url = array();
 		$readcost = array();
 	
