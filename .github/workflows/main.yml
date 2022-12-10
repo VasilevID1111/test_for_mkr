@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [dvp, main]
+    branches: [dvp]
 
 name: 🚀 Deploy website on push
 jobs:
