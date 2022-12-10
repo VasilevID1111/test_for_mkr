@@ -77,7 +77,7 @@ for ($i = 0; $i < count($usname); $i++) {
 			<select name="gettype" id="gettype" class="select-search">
 				<option value="Все">Все</option>
 				<option value="Заяв1ки">Заявки</option>
-				<option value="Объяв123123ления">Объявления</option>
+				<option value="Объяв123123ления">Объявл111ения</option>
 			</select>
 			
 		</div>
