@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       - dvp
-      - main
+      - testvetka
 
 name: 🚀 Deploy website on push
 jobs:
